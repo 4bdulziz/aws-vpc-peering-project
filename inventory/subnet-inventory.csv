@@ -1,0 +1,4 @@
+name,subnet_id,cidr,type,availability_zone,vpc,associated_instance,route_table,evidence_basis,historical_status,post_cleanup_status
+ewb-a-public,subnet-011d99c563bd9656b,10.10.1.0/24,Public,ap-south-1a,VPC A,ewb-bastion,ewb-rt-a-public,Name/ID/AZ: E05; association: E09; CIDR: draft/brief only,historical (existed during testing on 2026-10-24),deleted (reported by author; no evidence)
+ewb-a-private,subnet-08eab20f295efdc5a,10.10.2.0/24,Private,ap-south-1a,VPC A,ewb-app-a,ewb-rt-a-private,Name/ID/AZ: E06; association: E10 (truncated ID); CIDR consistent with E02 (10.10.2.10/24),historical (existed during testing on 2026-10-24),deleted (reported by author; no evidence)
+ewb-b-private,subnet-0a35b63c993fff461,10.20.1.0/24,Private,ap-south-1a,VPC B,ewb-app-b,ewb-rt-b-private,Name/ID/AZ: E07; association: E11 (truncated ID); CIDR: draft/brief only,historical (existed during testing on 2026-10-24),deleted (reported by author; no evidence)

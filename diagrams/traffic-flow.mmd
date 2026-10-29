@@ -1,0 +1,22 @@
+%% ICMP ping App-A -> App-B and reply (historical configuration)
+sequenceDiagram
+  autonumber
+  participant A as App-A 10.10.2.10
+  participant RA as ewb-rt-a-private
+  participant P as Peering ewb-a-b-peer (pcx-029955b9450e10c12)
+  participant SB as ewb-sg-app-b (inbound)
+  participant B as App-B 10.20.1.10
+  participant RB as ewb-rt-b-private
+  A->>RA: echo request to 10.20.1.10
+  RA->>P: match 10.20.0.0/16 -> pcx
+  P->>SB: deliver into VPC B
+  alt inbound All ICMP from 10.10.2.10/32 present
+    SB->>B: echo request permitted
+    B->>RB: echo reply to 10.10.2.10
+    RB->>P: match 10.10.0.0/16 -> pcx
+    P->>A: reply returns (stateful, tracked)
+    Note over A,B: Observed in the B to A direction (E03): 4 of 4 replies
+  else rule removed (controlled failure)
+    SB--xA: no reply
+    Note over A,B: Observed (E04): 4 sent, 0 received, 100% loss
+  end

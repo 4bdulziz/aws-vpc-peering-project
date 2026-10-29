@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1730 1075" width="1730" height="1075">
+<defs><marker id="ac" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00A8E8"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D9822B"/></marker></defs>
+<rect x="0" y="0" width="1730" height="1075" rx="0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0" />
+<rect x="0" y="0" width="1730" height="78" rx="0" fill="#0B1F3A" stroke="#0B1F3A" stroke-width="0" />
+<text x="40" y="36" font-family="'DejaVu Sans',Arial,sans-serif" font-size="24" fill="#FFFFFF" font-weight="bold" text-anchor="start">AWS VPC Peering — Historical Project Architecture</text>
+<text x="40" y="61" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#9FD8F5" font-weight="normal" text-anchor="start">Region ap-south-1 (Mumbai)  ·  Availability Zone ap-south-1a  ·  Tested 24 Oct 2026  ·  Author: Abdul Aziz</text>
+<rect x="1400" y="22" width="290" height="34" rx="17" fill="none" stroke="#00A8E8" stroke-width="1.5" />
+<text x="1545" y="44" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#00A8E8" font-weight="bold" text-anchor="middle">HISTORICAL — NOT A LIVE DEPLOYMENT</text>
+<rect x="60" y="100" width="340" height="62" rx="10" fill="#F4F8FC" stroke="#5B6B7F" stroke-width="1.5" />
+<text x="230" y="126" font-family="'DejaVu Sans',Arial,sans-serif" font-size="15" fill="#0B1F3A" font-weight="bold" text-anchor="middle">Administrator workstation</text>
+<text x="230" y="147" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">admin public IP redacted</text>
+<rect x="110" y="205" width="240" height="50" rx="10" fill="#FFFFFF" stroke="#0B1F3A" stroke-width="2" />
+<text x="230" y="227" font-family="'DejaVu Sans',Arial,sans-serif" font-size="13" fill="#0B1F3A" font-weight="bold" text-anchor="middle">Internet gateway ewb-igw-a</text>
+<text x="230" y="244" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">igw-08dc44b91e4be2768</text>
+<line x1="230" y1="162" x2="230" y2="203" stroke="#D9822B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aa)"/>
+<text x="244" y="188" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#D9822B" font-weight="bold" text-anchor="start">SSH 22 to [redacted public IPv4]</text>
+<rect x="440" y="95" width="560" height="130" rx="10" fill="#FFFFFF" stroke="#C9D6E3" stroke-width="1.2" />
+<text x="458" y="118" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">Legend</text>
+<line x1="458" y1="140" x2="520" y2="140" stroke="#00A8E8" stroke-width="3" marker-start="url(#ac)" marker-end="url(#ac)"/>
+<text x="534" y="145" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">Private ICMP between App-A and App-B (via peering)</text>
+<line x1="458" y1="164" x2="520" y2="164" stroke="#D9822B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aa)"/>
+<text x="534" y="169" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">Administrative SSH (TCP 22)</text>
+<rect x="458" y="181" width="62" height="14" rx="3" fill="#FFF4E0" stroke="#D9822B" stroke-width="1.2" stroke-dasharray="4 3" />
+<text x="534" y="193" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">Route table (associated with subnet shown above it)</text>
+<text x="458" y="214" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">†  Value taken from draft report / brief; no screenshot supplied for it.</text>
+<rect x="1030" y="95" width="660" height="130" rx="10" fill="#F4F8FC" stroke="#C9D6E3" stroke-width="1.2" />
+<text x="1050" y="120" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">Status of this configuration</text>
+<text x="1050" y="143" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">Peering ewb-a-b-peer was Active during testing.</text>
+<text x="1050" y="163" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">All project resources were deleted during cleanup (reported by</text>
+<text x="1050" y="181" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="normal" text-anchor="start">the author; no cleanup screenshots were supplied).</text>
+<text x="1050" y="206" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">Shown: historical tested topology only.</text>
+<rect x="40" y="265" width="760" height="560" rx="14" fill="#EAF4FB" stroke="#1B6FA8" stroke-width="2.5" />
+<text x="320" y="293" font-family="'DejaVu Sans',Arial,sans-serif" font-size="18" fill="#0B1F3A" font-weight="bold" text-anchor="start">VPC A  ·  ewb-vpc-a</text>
+<text x="320" y="314" font-family="'DejaVu Sans Mono',monospace" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">10.10.0.0/16  ·  vpc-0e2bca34602e78401</text>
+<rect x="650" y="276" width="128" height="24" rx="12" fill="#FFFFFF" stroke="#1B6FA8" stroke-width="1.2" />
+<text x="714" y="293" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#0B1F3A" font-weight="normal" text-anchor="middle">AZ ap-south-1a</text>
+<rect x="1000" y="265" width="690" height="560" rx="14" fill="#EDF8F6" stroke="#0E8F8F" stroke-width="2.5" />
+<text x="1022" y="293" font-family="'DejaVu Sans',Arial,sans-serif" font-size="18" fill="#0B1F3A" font-weight="bold" text-anchor="start">VPC B  ·  ewb-vpc-b</text>
+<text x="1022" y="314" font-family="'DejaVu Sans Mono',monospace" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">10.20.0.0/16  ·  vpc-055190c346eacb6e2</text>
+<rect x="1540" y="276" width="128" height="24" rx="12" fill="#FFFFFF" stroke="#0E8F8F" stroke-width="1.2" />
+<text x="1604" y="293" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#0B1F3A" font-weight="normal" text-anchor="middle">AZ ap-south-1a</text>
+<rect x="70" y="335" width="720" height="220" rx="10" fill="#FFFFFF" stroke="#1B6FA8" stroke-width="1.6" />
+<text x="774" y="359" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="end">Public subnet · ewb-a-public</text>
+<text x="774" y="377" font-family="'DejaVu Sans Mono',monospace" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">10.10.1.0/24 · subnet-011d99c563bd9656b</text>
+<rect x="100" y="388" width="280" height="112" rx="8" fill="#FFF4E0" stroke="#E08A00" stroke-width="1.6" />
+<text x="112" y="412" font-family="'DejaVu Sans',Arial,sans-serif" font-size="15" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-bastion</text>
+<text x="112" y="431" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">i-0c32a0b68dbcf4c19</text>
+<text x="112" y="450" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">private 10.10.1.10</text>
+<text x="112" y="468" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">public  [redacted public IPv4]</text>
+<text x="112" y="485" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">SG ewb-sg-bastion</text>
+<rect x="430" y="388" width="340" height="128" rx="8" fill="#FFF4E0" stroke="#D9822B" stroke-width="1.4" stroke-dasharray="4 3" />
+<text x="440" y="407" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="bold" text-anchor="start">Route table ewb-rt-a-public †</text>
+<text x="440" y="423" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">rtb-074befa2c9ec0b2da</text>
+<text x="440" y="437" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">associated with ewb-a-public</text>
+<text x="440" y="460" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.10.0.0/16 → local</text>
+<text x="440" y="482" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.20.0.0/16 → pcx-029955b9450e10c12</text>
+<text x="440" y="504" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">0.0.0.0/0 → igw-08dc44b91e4be2768</text>
+<rect x="70" y="585" width="720" height="230" rx="10" fill="#FFFFFF" stroke="#1B6FA8" stroke-width="1.6" />
+<text x="774" y="609" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="end">Private subnet · ewb-a-private</text>
+<text x="774" y="627" font-family="'DejaVu Sans Mono',monospace" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">10.10.2.0/24 · subnet-08eab20f295efdc5a</text>
+<rect x="100" y="638" width="280" height="112" rx="8" fill="#FFF4E0" stroke="#E08A00" stroke-width="1.6" />
+<text x="112" y="662" font-family="'DejaVu Sans',Arial,sans-serif" font-size="15" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-app-a</text>
+<text x="112" y="681" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">i-03f2e1cdcc22ab028</text>
+<text x="112" y="700" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">private 10.10.2.10</text>
+<text x="112" y="718" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">public  none</text>
+<text x="112" y="735" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">SG ewb-sg-app-a</text>
+<rect x="430" y="638" width="340" height="106" rx="8" fill="#FFF4E0" stroke="#D9822B" stroke-width="1.4" stroke-dasharray="4 3" />
+<text x="440" y="657" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="bold" text-anchor="start">Route table ewb-rt-a-private</text>
+<text x="440" y="673" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">rtb-02fd4cd445c1b0910</text>
+<text x="440" y="687" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">associated with ewb-a-private</text>
+<text x="440" y="710" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.10.0.0/16 → local</text>
+<text x="440" y="732" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.20.0.0/16 → pcx-029955b9450e10c12</text>
+<rect x="1030" y="585" width="630" height="230" rx="10" fill="#FFFFFF" stroke="#0E8F8F" stroke-width="1.6" />
+<text x="1046" y="609" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">Private subnet · ewb-b-private</text>
+<text x="1046" y="627" font-family="'DejaVu Sans Mono',monospace" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">10.20.1.0/24 · subnet-0a35b63c993fff461</text>
+<rect x="1090" y="638" width="280" height="112" rx="8" fill="#FFF4E0" stroke="#E08A00" stroke-width="1.6" />
+<text x="1102" y="662" font-family="'DejaVu Sans',Arial,sans-serif" font-size="15" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-app-b</text>
+<text x="1102" y="681" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">i-09e1acf311b10836d</text>
+<text x="1102" y="700" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">private 10.20.1.10</text>
+<text x="1102" y="718" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">public  none</text>
+<text x="1102" y="735" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">SG ewb-sg-app-b</text>
+<rect x="1385" y="638" width="265" height="106" rx="8" fill="#FFF4E0" stroke="#D9822B" stroke-width="1.4" stroke-dasharray="4 3" />
+<text x="1395" y="657" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12.5" fill="#0B1F3A" font-weight="bold" text-anchor="start">Route table ewb-rt-b-private</text>
+<text x="1395" y="673" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">rtb-0b65c2d0934b9e333</text>
+<text x="1395" y="687" font-family="'DejaVu Sans Mono',monospace" font-size="10" fill="#5B6B7F" font-weight="normal" text-anchor="start">associated with ewb-b-private</text>
+<text x="1395" y="710" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.20.0.0/16 → local</text>
+<text x="1395" y="732" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#0B1F3A" font-weight="normal" text-anchor="start">10.10.0.0/16 → pcx-029955b9450e10c12</text>
+<rect x="1030" y="335" width="630" height="110" rx="10" fill="#FFFFFF" stroke="#C9D6E3" stroke-width="1.2" stroke-dasharray="5 4" />
+<text x="1048" y="362" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">No internet gateway attached to VPC B</text>
+<text x="1048" y="384" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">App-B has no public IPv4 and no 0.0.0.0/0 route. Peering gives VPC B</text>
+<text x="1048" y="402" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">private reachability to VPC A only; it does not provide internet access</text>
+<text x="1048" y="420" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">through VPC A, and peering is not transitive.</text>
+<line x1="230" y1="255" x2="230" y2="386" stroke="#D9822B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aa)"/>
+<line x1="150" y1="500" x2="150" y2="636" stroke="#D9822B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aa)"/>
+<rect x="160" y="560" width="205" height="20" rx="3" fill="#FFFFFF" stroke="none" stroke-width="0" />
+<text x="165" y="574" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#D9822B" font-weight="bold" text-anchor="start">SSH 22 from 10.10.1.10 (local)</text>
+<polyline points="340,500 340,530 1345,530 1345,636" fill="none" stroke="#D9822B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aa)"/>
+<text x="1010" y="520" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#D9822B" font-weight="bold" text-anchor="start">SSH 22 from 10.10.1.10 to App-B (routed via peering)</text>
+<polyline points="240,750 240,780 1230,780 1230,752" fill="none" stroke="#00A8E8" stroke-width="3" marker-start="url(#ac)" marker-end="url(#ac)"/>
+<text x="260" y="772" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#0079B0" font-weight="bold" text-anchor="start">ICMP echo / reply: 10.10.2.10 ↔ 10.20.1.10</text>
+<rect x="835" y="400" width="130" height="330" rx="18" fill="#F1EEFB" stroke="#6B4FC8" stroke-width="2.5" />
+<text x="900" y="430" font-family="'DejaVu Sans',Arial,sans-serif" font-size="13" fill="#3E2A94" font-weight="bold" text-anchor="middle">VPC PEERING</text>
+<text x="900" y="452" font-family="'DejaVu Sans',Arial,sans-serif" font-size="13" fill="#0B1F3A" font-weight="bold" text-anchor="middle">ewb-a-b-peer</text>
+<text x="900" y="482" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#3E2A94" font-weight="normal" text-anchor="middle">pcx-029955b</text>
+<text x="900" y="498" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#3E2A94" font-weight="normal" text-anchor="middle">9450e10c12</text>
+<text x="900" y="530" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#0B1F3A" font-weight="normal" text-anchor="middle">Active during</text>
+<text x="900" y="546" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11.5" fill="#0B1F3A" font-weight="normal" text-anchor="middle">testing</text>
+<text x="900" y="590" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">requester VPC A</text>
+<text x="900" y="606" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">10.10.0.0/16</text>
+<text x="900" y="634" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">accepter VPC B</text>
+<text x="900" y="650" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">10.20.0.0/16</text>
+<text x="900" y="700" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">same account</text>
+<text x="900" y="716" font-family="'DejaVu Sans',Arial,sans-serif" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="middle">same Region</text>
+<circle cx="835" cy="530" r="4.5" fill="#6B4FC8"/>
+<circle cx="965" cy="530" r="4.5" fill="#6B4FC8"/>
+<circle cx="835" cy="780" r="4.5" fill="#6B4FC8"/>
+<circle cx="965" cy="780" r="4.5" fill="#6B4FC8"/>
+<text x="40" y="878" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14.5" fill="#0B1F3A" font-weight="bold" text-anchor="start">Security groups — inbound rules during testing (outbound: default allow-all, not altered)</text>
+<rect x="40" y="890" width="540" height="128" rx="10" fill="#F4F8FC" stroke="#C9D6E3" stroke-width="1.2" />
+<text x="54" y="914" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-sg-bastion †</text>
+<text x="54" y="931" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">sg-07efbf81da7c99333</text>
+<text x="54" y="958" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">SSH TCP 22   ←  admin-IP-redacted/32</text>
+<text x="384" y="958" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">administrator IP</text>
+<rect x="595" y="890" width="540" height="128" rx="10" fill="#F4F8FC" stroke="#C9D6E3" stroke-width="1.2" />
+<text x="609" y="914" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-sg-app-a</text>
+<text x="609" y="931" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">sg-046c7ae629f8a628c</text>
+<text x="609" y="958" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">SSH TCP 22   ←  10.10.1.10/32</text>
+<text x="939" y="958" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">bastion</text>
+<text x="609" y="982" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">All ICMP IPv4 ←  10.20.1.10/32</text>
+<text x="939" y="982" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">App-B</text>
+<rect x="1150" y="890" width="540" height="128" rx="10" fill="#F4F8FC" stroke="#C9D6E3" stroke-width="1.2" />
+<text x="1164" y="914" font-family="'DejaVu Sans',Arial,sans-serif" font-size="14" fill="#0B1F3A" font-weight="bold" text-anchor="start">ewb-sg-app-b †</text>
+<text x="1164" y="931" font-family="'DejaVu Sans Mono',monospace" font-size="11" fill="#5B6B7F" font-weight="normal" text-anchor="start">sg-081ad63f6378a6b76</text>
+<text x="1164" y="958" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">All ICMP IPv4 ←  10.10.2.10/32</text>
+<text x="1494" y="958" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">App-A</text>
+<text x="1164" y="982" font-family="'DejaVu Sans Mono',monospace" font-size="12" fill="#0B1F3A" font-weight="normal" text-anchor="start">SSH TCP 22   ←  10.10.1.10/32</text>
+<text x="1494" y="982" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">bastion</text>
+<text x="40" y="1050" font-family="'DejaVu Sans',Arial,sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="start">Historical configuration during testing; resources deleted during cleanup. Identifiers are taken from the supplied AWS Console screenshots except items marked †.</text>
+</svg>

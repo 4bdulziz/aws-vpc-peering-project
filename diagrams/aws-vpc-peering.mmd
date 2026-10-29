@@ -1,0 +1,37 @@
+%% Historical project architecture (ap-south-1). Resources were deleted during cleanup.
+flowchart LR
+  ADMIN["Administrator workstation<br/>SSH source admin IPv4 (redacted)/32 †"]
+  IGW["Internet gateway ewb-igw-a<br/>igw-08dc44b91e4be2768"]
+  ADMIN -- "SSH 22 to [redacted public IPv4]" --> IGW
+
+  subgraph VPCA["VPC A · ewb-vpc-a · 10.10.0.0/16 · vpc-0e2bca34602e78401"]
+    direction TB
+    subgraph PUB["Public subnet ewb-a-public · 10.10.1.0/24 · subnet-011d99c563bd9656b"]
+      BASTION["ewb-bastion · i-0c32a0b68dbcf4c19<br/>10.10.1.10 / public [redacted public IPv4]<br/>SG ewb-sg-bastion"]
+      RTPUB[/"ewb-rt-a-public rtb-074befa2c9ec0b2da †<br/>10.10.0.0/16 local<br/>10.20.0.0/16 pcx-029955b9450e10c12<br/>0.0.0.0/0 igw-08dc44b91e4be2768"/]
+    end
+    subgraph PRIVA["Private subnet ewb-a-private · 10.10.2.0/24 · subnet-08eab20f295efdc5a"]
+      APPA["ewb-app-a · i-03f2e1cdcc22ab028<br/>10.10.2.10 / no public IPv4<br/>SG ewb-sg-app-a"]
+      RTA[/"ewb-rt-a-private rtb-02fd4cd445c1b0910<br/>10.10.0.0/16 local<br/>10.20.0.0/16 pcx-029955b9450e10c12"/]
+    end
+  end
+
+  PCX{{"VPC peering ewb-a-b-peer<br/>pcx-029955b9450e10c12<br/>Active during testing"}}
+
+  subgraph VPCB["VPC B · ewb-vpc-b · 10.20.0.0/16 · vpc-055190c346eacb6e2 (no internet gateway)"]
+    direction TB
+    subgraph PRIVB["Private subnet ewb-b-private · 10.20.1.0/24 · subnet-0a35b63c993fff461"]
+      APPB["ewb-app-b · i-09e1acf311b10836d<br/>10.20.1.10 / no public IPv4<br/>SG ewb-sg-app-b"]
+      RTB[/"ewb-rt-b-private rtb-0b65c2d0934b9e333<br/>10.20.0.0/16 local<br/>10.10.0.0/16 pcx-029955b9450e10c12"/]
+    end
+  end
+
+  IGW --> BASTION
+  BASTION -. "SSH 22 (local route)" .-> APPA
+  BASTION -. "SSH 22 via peering route" .-> PCX
+  PCX -. "SSH 22 from 10.10.1.10" .-> APPB
+  APPA <== "ICMP both directions" ==> PCX
+  PCX <== "ICMP both directions" ==> APPB
+  RTPUB --- BASTION
+  RTA --- APPA
+  RTB --- APPB
